@@ -1,0 +1,14 @@
+export const synthesisCapabilities = [
+  { title: "Drawing & specification intelligence", body: "Bring construction document information into an evidence-linked project record. Review the source behind a finding rather than relying on an unsupported answer." },
+  { title: "Requirements, issues & assumptions", body: "Keep requirements, issue findings, consolidated conditions, and assumptions connected. Review AV-suggested interpretations and clarify what is still unresolved." },
+  { title: "RFIs that retain their context", body: "Develop and review RFI drafts against related findings and evidence. Reevaluate questions as project information changes, with people retaining decision authority." },
+  { title: "Responsibility & accountability", body: "Distinguish discipline responsibility, individual assignment, and downstream impact. Review AV suggestions and make human overrides; responsibility is not the same as assignment." },
+  { title: "Schedule relationships & Upcoming Work", body: "Link project intelligence to affected activities and surface unresolved information around upcoming work. These are information relationships, not CPM scheduling or delay predictions." },
+  { title: "Project & VDC readiness", body: "Understand whether information is Ready, Ready with Open Items, At Risk, Not Ready, or Insufficient Information. Review the reasons behind a state, not an opaque numerical score." },
+  { title: "Trade Intelligence", body: "Review project information through trade scope and all-trades reporting, while preserving the evidence and relationships that connect the broader project." },
+  { title: "Revision intelligence", body: "Review revision history, change records, and slip-sheet information to understand what changed and revisit the information that depends on it." },
+  { title: "Regulatory & code intelligence", body: "Review source-linked potential conflicts and items requiring verification. Findings support professional review; they are not a determination of code compliance or a claim of a code violation." },
+  { title: "Search AV & reports", body: "Search previously structured project intelligence with evidence-cited answers. Review and report on requirements, findings, responsibilities, and readiness without losing project context." },
+];
+export const intelligenceRelationships = ["Evidence", "Requirements / Issues / Assumptions", "Consolidated Conditions", "RFIs", "Responsibility", "Assignment", "Schedule Relationships", "Readiness", "Revision Consequences"];
+export const projectParticipants = ["Owners", "Owner’s Representatives", "General Contractors", "Construction Managers", "VDC / BIM Teams", "Preconstruction Teams", "Estimators", "Project Managers", "Project Controls", "Schedulers", "Architects", "Engineers", "Specialty Contractors", "VDC Consultants", "Modeling Teams"];

@@ -1,0 +1,38 @@
+# Marketing website update
+- [x] Replace both AV Shutter 360 photos with the newly supplied angled and top-down studio images; both load and switch in the slider, old CDN copies removed, build OK.
+- [x] Add AV Shutter 360 Stereo and Coming Soon monocular variant to AV Suite with supplied-photo slider, standard logo, shareable path and footer link; photo switching, image loading, footer navigation and phone layout verified; product test passed and build OK.
+- [x] Add a floating back-to-top control on every page, revealed after 480px of scroll with a gold scroll-progress ring; appearance, click-to-top and page coverage verified in preview; build OK.
+- [x] Give all 11 AV Suite navigation tiles shareable product paths; direct visits, refresh, navigation, history and legacy anchors verified; preview build OK.
+- [x] Add AV Hero to AV Suite and footer with supplied banner, standard icon and product information; banner/icon load, six features and footer anchor verified; preview build OK.
+- [x] Add Week, 30 Days, All Time and explicit All-users chart control; 21 tests passed and preview build OK.
+- [x] Add token series and a second y-axis to the AI chart (18 reporting tests passed; preview build OK).
+- [x] Expand customer details directly below the selected customer; signed-in visual validation remains blocked by two-step verification below.
+- [x] Add user AI credit chart with Day/Month/6mo/Yearly windows and Itemized tab.
+- [x] Show customer joined dates and recorded lifecycle filters.
+- [x] Scope overview user metrics and labels to the selected product; preserve Downloads and Products.
+- [x] Validate admin reporting calculations (17 passing tests) and successful preview build.
+- [ ] Verify reporting screens with real data — blocked by authenticator two-step verification on the available session.
+- [x] Replace scanAR backpack, aerial and wearable kit photos with the supplied 4x studio images, uncropped.
+- [x] Add AV Tools on AV Suite with thematic artwork, supplied icons and NF Xplode plugin grid.
+- [x] Activate NF Xplode using the supplied ZIP, enlarge its logo and place the download icon beside the name without pending text.
+- [x] Replace all seven AV Suite logos with the matching supplied -01 images, retaining original colors and placement.
+- [x] Invert monochrome site colors to white backgrounds and dark text; rename shared workspace links to AV Pre-VDC Login without changing destinations.
+- [x] Match AV Pre-VDC and AV Scan page marks to the homepage Verify / Direct / Clarify image sizing and placement, without cropping.
+- [x] Verify themed AV Scan suite artwork, AV Suite product dropdown and uncropped product images.
+- [x] Integrate AV Scan across homepage, suite, navigation and dedicated page; preserve current/roadmap distinctions.
+- [x] Update Pre-VDC preconstruction wording, remove pricing links, add themed conceptual artwork and verified Lovable workspace access.
+- [x] Verify updated product navigation and media; suite-to-product flow, anchors, inquiry, workspace link and image loading pass.
+- [x] Verify AV Pre-VDC capabilities and available real imagery in read-only application snapshot.
+- [x] Prioritize AV Pre-VDC on homepage and add dedicated product page.
+- [x] Add AV Pre-VDC natively to AV Suite and retain the broader ecosystem.
+- [x] Add capacity-based pricing, honest application-link configuration, navigation and resources architecture.
+- [x] Validate links, pricing rules, desktop/tablet/mobile presentation and website build signals.
+- [ ] Connect Start / Sign In — blocked on verified production application/paywall URL and billing readiness.
+- [ ] Add genuine application screenshots — blocked on approved screenshots; none exist in the inspected source snapshot.
+- [ ] Add real AV Scan GUI and merged capture imagery — blocked on supplied or verified AV Scan media; use the supplied mark, not fabricated scans.
+- [ ] Publish final plan prices — blocked on supplied monthly allowances, prices, add-on prices and storage terms.- [x] AV Sort/AV Shift on AV Suite, footer, coming-soon pages; homepage featured = Pre-VDC, Sort, NF Xplode
+- [x] Admin platform: registry, central customers, downloads analytics, finance entry, MFA (implemented, admin GUI untested signed-in)
+- [ ] Connect Pre-VDC/Sort/Shift events (blocked: changes in those projects, see docs/admin-integration-contract.md)
+- [ ] Payments/subscriptions (blocked: payment provider)
+- [ ] admin.artificialviz.com subdomain (blocked: DNS)
+- [x] Rename AV Pre-VDC to AV Synthesis and AV Walkthrough to AV Showcase across pages, navigation, metadata, sitemap, registry and asset references.

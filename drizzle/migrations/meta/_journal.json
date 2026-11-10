@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791724574686,
+      "tag": "0000_admin_platform",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791724603637,
+      "tag": "0001_download_sync_trigger",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791726566616,
+      "tag": "0002_migration",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791780618922,
+      "tag": "0003_rename_av_pre_vdc_to_av_synthesis_and_av_walkthrough_to_av_showcase",
+      "breakpoints": true
+    }
+  ]
+}

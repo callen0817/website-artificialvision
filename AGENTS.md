@@ -1,0 +1,19 @@
+# Marketing architecture
+- Keep this project a public marketing SPA; the separate product application that supplies AV Synthesis source facts (Lovable project 2ffd9259-7321-4a62-8103-ba34a97f1014, originally named AV Pre-VDC) is read-only source material, never a migration or application implementation target.
+- Use current product names on every marketing surface: AV Synthesis (formerly AV Pre-VDC) and AV Showcase (formerly AV Walkthrough); the source application keeps its own project name and is never renamed by this site.
+- Centralize the AV Synthesis production destination in the marketing product configuration and render Start/Sign In only when verified, preventing fake authentication or checkout links.
+- Keep product capabilities grounded in the read-only source audit and record content gaps separately, avoiding unsupported commercial claims.
+- Use shared marketing actions and processing-capacity sections across product surfaces so customer rules and destinations remain consistent.
+- Resolve hosted image pointers through their owning preview origin only on localhost, since local Vite does not serve the hosting asset route; production keeps relative same-project URLs.
+- Use route-specific head metadata and a public sitemap for the marketing pages; resources remain an editorial shell until real content is supplied.
+- Keep AV Scan product facts centralized and current capabilities separate from roadmap; supplied marks are used until authenticated product media is available.
+- Keep the verified AV Synthesis Lovable workspace link separate from the unverified production destination to avoid implying purchase or public access readiness.
+- Keep AV Tools and its plugin catalog in separate marketing data and append it only on AV Suite; download controls stay disabled until a real destination is supplied.
+- Keep AV Hero marketing data separate and append it only on AV Suite with a footer anchor, so adding the game does not change other product surfaces or imply a verified play destination.
+- Keep AV Shutter camera facts and photos in separate marketing data with a dedicated image slider on AV Suite; photo captions describe views rather than implying an unverified variant identification.
+- AV Suite product paths render the existing suite and scroll to the matching product; navigation tiles use real links while legacy hash anchors remain supported, so social shares and browser history work without duplicate pages.
+- The central admin (/admin) reads only from registry tables (products, customers, download_events, financial_entries, runtime_ai_usage, entitlements) gated by `is_admin_mfa()`, so new products need data rows, not new dashboard code.
+- The public download form still writes `tool_customers`; a database trigger mirrors it into customers/download_events so the public workflow stays unchanged.
+- Product apps reach the admin data only through the signed av-admin-api function (per-product HMAC secret, idempotency keys); entitlement RPCs are service-role only so no browser can move credits.
+- Admin customer product attribution includes product memberships and recorded download, finance and runtime usage associations, so app registrations appear without requiring a download.
+- Admin reporting calculations live in tested adminMetrics helpers, and AI chart drill-down uses the shared chart components; customer lifecycle and product joined dates come from recorded memberships without inferring deletion from missing records.

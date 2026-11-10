@@ -1,0 +1,3 @@
+project_id = "iabhbgwyawofzqqooyhh"
+[functions.av-admin-api]
+verify_jwt = false

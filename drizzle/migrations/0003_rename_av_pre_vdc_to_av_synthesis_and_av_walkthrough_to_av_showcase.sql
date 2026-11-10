@@ -1,0 +1,2 @@
+UPDATE public.products SET id = 'av-synthesis', name = 'AV Synthesis', page_url = '/av-synthesis' WHERE id = 'av-pre-vdc';
+UPDATE public.products SET id = 'av-showcase', name = 'AV Showcase', page_url = '/av-suite#av-showcase' WHERE id = 'av-walkthrough';
