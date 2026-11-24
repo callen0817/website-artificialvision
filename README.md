@@ -47,3 +47,16 @@ The repository intentionally uses `package-lock.json` with packages from the pub
 The frontend can be hosted independently, but the database, admin authentication and signed product-event receiver still require the configured backend. Keep that service available or migrate it separately before switching DNS.
 
 The canonical public address is `https://artificialviz.com`. Add both `artificialviz.com` and `www.artificialviz.com` as custom domains only after the first Cloudflare deployment and admin sign-in have been verified.
+
+## Cloudflare Workers static hosting
+
+For the existing `website-artificialvision` Worker connected to GitHub, use
+`npm run build` as the build command and `npx wrangler deploy` as the deploy
+command. `wrangler.jsonc` serves `dist` with single-page application fallback.
+The standard Vite React plugin avoids requiring SWC native bindings on the build host.
+
+Set the three public `VITE_SUPABASE_*` variables in Workers **Build variables**
+(they are needed when Vite builds, not as runtime Worker secrets). The checked-in
+`.env` currently provides these public values as defaults. Never add private
+backend keys to the frontend. Keep the backend active and verify admin login
+and downloads before moving custom domains.
