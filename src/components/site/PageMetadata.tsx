@@ -8,6 +8,7 @@ const metadata: Record<string, [string, string]> = {
   "/av-shift": ["AV Shift — Spatial data to structured models | Artificial Vision", "AI-assisted conversion of spatial data, point clouds and technical drawings into structured models and workflows. Coming soon."],
   "/av-scan": ["AV Scan — Any Sensor. One Map. | Artificial Vision", "Universal spatial capture with supported LiDAR, RGB-D, stereo and cameras. Capture, map, register independent scans and preserve source data with AV Scan."],
   "/av-suite": ["AV Suite — Software ecosystem | Artificial Vision", "Explore AV Synthesis and AV Scan alongside AV Structure, AV Snap, AV Segment, AV Splat and AV Showcase."],
+  "/av-suite/av-ios": ["AV iOS — iOS LiDAR Mount & SLAM Capture | Artificial Vision", "LiDAR mount for iPad and iPhone and the first iOS SLAM software connecting external LiDAR hardware while using iOS imaging sensors for camera colorization."],
   "/scanar": ["scanAR — Spatial capture hardware | Artificial Vision", "Explore scanAR capture hardware, LiDAR, imaging, positioning and the Artificial Vision software ecosystem."],
   "/technology": ["Technology | Artificial Vision", "Artificial intelligence, computer vision, spatial intelligence and reality capture for the built environment."],
   "/about": ["About Artificial Vision — Find your sense.", "Construction, BIM, VDC and reality-capture experience behind Artificial Vision's software and hardware."],

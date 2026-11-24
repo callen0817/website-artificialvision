@@ -13,8 +13,9 @@ import { avHeroProduct } from "@/data/avHero";
 import NotFound from "@/pages/NotFound";
 import { avShutterProduct } from "@/data/avShutter";
 import ShutterImageSlider from "@/components/site/ShutterImageSlider";
+import { avIosProduct } from "@/data/avIos";
 
-const products = [...suiteProducts, avSortProduct, avShiftProduct, avToolsProduct, avHeroProduct, avShutterProduct];
+const products = [...suiteProducts, avSortProduct, avShiftProduct, avToolsProduct, avHeroProduct, avShutterProduct, avIosProduct];
 
 const AVSuite = () => {
   const [downloadPlugin, setDownloadPlugin] = React.useState<RevitPlugin | null>(null);
@@ -53,13 +54,13 @@ const AVSuite = () => {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid border-t border-l border-border sm:grid-cols-2 lg:grid-cols-4">
             {products.map((p) => (
               <Button
                 variant="ghost"
                 key={p.id}
                 asChild
-                className="group h-auto rounded-none bg-background p-6 text-left whitespace-normal items-start flex-col transition-colors hover:bg-surface hover:text-foreground"
+                className="group h-auto rounded-none border-r border-b border-border bg-background p-6 text-left whitespace-normal items-start flex-col transition-colors hover:bg-surface hover:text-foreground"
               >
                 <Link to={`/av-suite/${p.id}`}>
                 <span className="label-mono text-muted-foreground/70 group-hover:text-gold transition-colors">
@@ -84,7 +85,7 @@ const AVSuite = () => {
                     src={product.image}
                     alt={`${product.name} — ${product.tagline}`}
                     loading="lazy"
-                    className={product.id === "av-hero" ? "h-auto w-full object-contain" : `h-[420px] w-full ${["av-scan", "av-synthesis", "av-tools", "av-sort", "av-shift"].includes(product.id) ? "object-contain" : "object-cover"}`}
+                    className={["av-hero", "av-ios"].includes(product.id) ? "h-auto w-full object-contain" : `h-[420px] w-full ${["av-scan", "av-synthesis", "av-tools", "av-sort", "av-shift"].includes(product.id) ? "object-contain" : "object-cover"}`}
                   />}
                   {product.imageCaption && <p className="label-mono border-t border-border px-6 py-4 text-muted-foreground">{product.imageCaption}</p>}
                 </Reveal>
@@ -92,7 +93,7 @@ const AVSuite = () => {
                 <Reveal delay={100} className={flipped ? "lg:order-1" : ""}>
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center border border-border bg-surface">
-                      <img src={product.logo} alt="" aria-hidden className={`h-6 w-6 object-contain ${["av-hero", "av-shutter-360"].includes(product.id) ? "invert" : ""}`} />
+                      <img src={product.logo} alt="" aria-hidden className={`${product.id === "av-ios" ? "h-9 w-9" : "h-6 w-6"} object-contain ${["av-hero", "av-shutter-360"].includes(product.id) ? "invert" : ""}`} />
                     </div>
                     <span className="label-mono text-gold">{product.stage}</span>
                   </div>
