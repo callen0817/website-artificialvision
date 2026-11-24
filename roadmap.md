@@ -1,4 +1,5 @@
 # Marketing website update
+- [x] Make the GitHub deployment self-contained for Cloudflare Pages: local media/downloads, portable routes, public npm lockfile, clean production build and GitHub update; 42 tests and browser checks passed.
 - [x] Replace both AV Shutter 360 photos with the newly supplied angled and top-down studio images; both load and switch in the slider, old CDN copies removed, build OK.
 - [x] Add AV Shutter 360 Stereo and Coming Soon monocular variant to AV Suite with supplied-photo slider, standard logo, shareable path and footer link; photo switching, image loading, footer navigation and phone layout verified; product test passed and build OK.
 - [x] Add a floating back-to-top control on every page, revealed after 480px of scroll with a gold scroll-progress ring; appearance, click-to-top and page coverage verified in preview; build OK.

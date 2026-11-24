@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# Artificial Vision website
 
-## Project info
+Public marketing and administration frontend for Artificial Vision, built with React, TypeScript, Vite and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/9ed464e6-fe7e-4968-bb95-902b4f49ede8
+## Local development
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ed464e6-fe7e-4968-bb95-902b4f49ede8) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js 20 or later and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Create a local `.env` with the public frontend configuration:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+VITE_SUPABASE_URL=<your-backend-url>
+VITE_SUPABASE_PUBLISHABLE_KEY=<your-public-anon-key>
+VITE_SUPABASE_PROJECT_ID=<your-backend-project-id>
+```
 
-**Use GitHub Codespaces**
+These are browser-public settings. Never put signing secrets, service-role keys or other private credentials in `VITE_*` variables or in this repository.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Production build
 
-## What technologies are used for this project?
+```sh
+npm ci
+npm run build
+```
 
-This project is built with:
+The deployable site is written to `dist`. The build uses only repository-local images, video and downloads; it does not require Lovable's asset host.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Cloudflare Pages
 
-## How can I deploy this project?
+- Framework preset: **Vite**
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Node.js: 20 or later
+- Add the three `VITE_SUPABASE_*` variables above to both Production and Preview environments.
 
-Simply open [Lovable](https://lovable.dev/projects/9ed464e6-fe7e-4968-bb95-902b4f49ede8) and click on Share -> Publish.
+`public/_redirects` is copied into the build and sends frontend routes to `index.html`, so direct visits and refreshes such as `/av-suite/av-hero`, `/av-scan` and `/admin` work on Cloudflare Pages.
 
-## Can I connect a custom domain to my Lovable project?
+The repository intentionally uses `package-lock.json` with packages from the public npm registry. Bun lockfiles are not required for deployment.
 
-Yes, you can!
+## Backend and custom domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The frontend can be hosted independently, but the database, admin authentication and signed product-event receiver still require the configured backend. Keep that service available or migrate it separately before switching DNS.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The canonical public address is `https://artificialviz.com`. Add both `artificialviz.com` and `www.artificialviz.com` as custom domains only after the first Cloudflare deployment and admin sign-in have been verified.

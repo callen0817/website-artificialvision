@@ -8,22 +8,11 @@ import SiteNav from "@/components/site/SiteNav";
 import SiteFooter from "@/components/site/SiteFooter";
 import Reveal from "@/components/site/Reveal";
 import scanarProduct from "@/assets/scanar-product-transparent.png";
-import scanarGuiAsset from "@/assets/scanar-gui.jpg.asset.json";
-import scanarBackpackAsset from "@/assets/ScanAR_Backpack_white.png.asset.json";
-import scanarDroneAsset from "@/assets/ScanAR_Drone_white.png.asset.json";
-import scanarHardhatAsset from "@/assets/ScanAR_Hardhat_white.png.asset.json";
+import scanarGui from "@/assets/scanar-gui.jpg";
+import scanarBackpack from "@/assets/ScanAR_Backpack_white.png";
+import scanarDrone from "@/assets/ScanAR_Drone_white.png";
+import scanarHelmetKit from "@/assets/ScanAR_Hardhat_white.png";
 import showcaseDrone from "@/assets/showcase-drone.jpg";
-
-// The CDN route is served by Lovable hosting, not the local Vite server.
-const photoUrl = (asset: { project_id: string; url: string }) =>
-  import.meta.env.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${asset.project_id}.lovable.app${asset.url}`
-    : asset.url;
-
-const scanarBackpack = photoUrl(scanarBackpackAsset);
-const scanarDrone = photoUrl(scanarDroneAsset);
-const scanarHelmetKit = photoUrl(scanarHardhatAsset);
-const scanarGui = photoUrl(scanarGuiAsset);
 
 const capturePillars = [
   {

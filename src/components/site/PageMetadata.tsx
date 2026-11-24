@@ -14,6 +14,7 @@ const metadata: Record<string, [string, string]> = {
   "/about": ["About Artificial Vision — Find your sense.", "Construction, BIM, VDC and reality-capture experience behind Artificial Vision's software and hardware."],
   "/contact": ["Contact Artificial Vision", "Discuss AV Synthesis demos, software, reality capture, hardware and partnerships with Artificial Vision."],
   "/insights": ["Resources & Insights | Artificial Vision", "Artificial Vision product releases, construction technology insights and company updates."],
+  "/admin": ["Admin | Artificial Vision", "Artificial Vision administration."],
 };
 export default function PageMetadata() {
   const { pathname } = useLocation();

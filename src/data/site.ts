@@ -1,8 +1,8 @@
-import avSegmentLogoAsset from "@/assets/av-segment-logo.png.asset.json";
-import avSnapLogoAsset from "@/assets/av-snap-logo.png.asset.json";
-import avSplatLogoAsset from "@/assets/av-splat-logo.png.asset.json";
-import avStructureLogoAsset from "@/assets/av-structure-logo.png.asset.json";
-import avShowcaseLogoAsset from "@/assets/av-showcase-logo.png.asset.json";
+import avSegmentLogo from "@/assets/av-segment-logo.png";
+import avSnapLogo from "@/assets/av-snap-logo.png";
+import avSplatLogo from "@/assets/av-splat-logo.png";
+import avStructureLogo from "@/assets/av-structure-logo.png";
+import avShowcaseLogo from "@/assets/av-showcase-logo.png";
 import avSegmentHero from "@/assets/av-segment-hero.jpg";
 import avSnapHero from "@/assets/av-snap-hero.jpg";
 import avSplatHero from "@/assets/av-splat-hero.jpg";
@@ -12,17 +12,6 @@ import { synthesisAssetUrl } from "@/data/synthesisAsset";
 import synthesisHero from "@/assets/av-synthesis-hero.jpg";
 import { avScanImage } from "@/data/avScan";
 import avScanHero from "@/assets/av-scan-hero.jpg";
-
-const logoUrl = (asset: { project_id: string; url: string }) =>
-  import.meta.env.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${asset.project_id}.lovable.app${asset.url}`
-    : asset.url;
-
-const avSegmentLogo = logoUrl(avSegmentLogoAsset);
-const avSnapLogo = logoUrl(avSnapLogoAsset);
-const avSplatLogo = logoUrl(avSplatLogoAsset);
-const avStructureLogo = logoUrl(avStructureLogoAsset);
-const avShowcaseLogo = logoUrl(avShowcaseLogoAsset);
 
 export const CONTACT_EMAIL = "chris@consultc4.com";
 

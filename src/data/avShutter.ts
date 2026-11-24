@@ -1,16 +1,11 @@
 import artificialVisionLogo from "@/assets/artificial-vision-logo-white.png";
-import stereoAsset from "@/assets/av-shutter-360-stereo.jpg.asset.json";
-import mountingAsset from "@/assets/av-shutter-360-mounting.jpg.asset.json";
+import stereoPhoto from "@/assets/av-shutter-360-stereo.jpg";
+import mountingPhoto from "@/assets/av-shutter-360-mounting.jpg";
 import type { SuiteProduct } from "@/data/site";
 
-const photoUrl = (asset: { project_id: string; url: string }) =>
-  import.meta.env.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${asset.project_id}.lovable.app${asset.url}`
-    : asset.url;
-
 export const avShutterPhotos = [
-  { src: photoUrl(stereoAsset), alt: "AV Shutter 360 Stereo panoramic camera — angled view showing camera pairs", caption: "Panoramic stereo camera · Angled view" },
-  { src: photoUrl(mountingAsset), alt: "AV Shutter 360 camera — top-down view of the enclosure with adjustment knobs and mounting arm", caption: "Camera enclosure · Top view" },
+  { src: stereoPhoto, alt: "AV Shutter 360 Stereo panoramic camera — angled view showing camera pairs", caption: "Panoramic stereo camera · Angled view" },
+  { src: mountingPhoto, alt: "AV Shutter 360 camera — top-down view of the enclosure with adjustment knobs and mounting arm", caption: "Camera enclosure · Top view" },
 ];
 
 export const avShutterVariants = [

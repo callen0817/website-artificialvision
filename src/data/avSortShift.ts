@@ -1,16 +1,8 @@
-import sortLogoAsset from "@/assets/av-sort-logo.png.asset.json";
-import shiftLogoAsset from "@/assets/av-shift-logo.png.asset.json";
+import sortLogo from "@/assets/av-sort-logo.png";
+import shiftLogo from "@/assets/av-shift-logo.png";
 import avSortHero from "@/assets/av-sort-hero.jpg";
 import avShiftHero from "@/assets/av-shift-hero.jpg";
 import type { SuiteProduct } from "./site";
-
-const assetUrl = (asset: { project_id: string; url: string }) =>
-  import.meta.env?.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${asset.project_id}.lovable.app${asset.url}`
-    : asset.url;
-
-const sortLogo = assetUrl(sortLogoAsset);
-const shiftLogo = assetUrl(shiftLogoAsset);
 
 // Release status unverified: shown as not yet publicly released. No production URLs invented.
 export const avSortProduct: SuiteProduct = {

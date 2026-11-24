@@ -1,11 +1,6 @@
 import artificialVisionLogo from "@/assets/artificial-vision-logo-white.png";
-import bannerAsset from "@/assets/av_hero_website_banner.jpg.asset.json";
+import bannerUrl from "@/assets/av_hero_website_banner.jpg";
 import type { SuiteProduct } from "@/data/site";
-
-const bannerUrl =
-  import.meta.env.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${bannerAsset.project_id}.lovable.app${bannerAsset.url}`
-    : bannerAsset.url;
 
 export const avHeroProduct: SuiteProduct = {
   id: "av-hero",

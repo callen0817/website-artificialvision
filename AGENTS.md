@@ -4,7 +4,7 @@
 - Centralize the AV Synthesis production destination in the marketing product configuration and render Start/Sign In only when verified, preventing fake authentication or checkout links.
 - Keep product capabilities grounded in the read-only source audit and record content gaps separately, avoiding unsupported commercial claims.
 - Use shared marketing actions and processing-capacity sections across product surfaces so customer rules and destinations remain consistent.
-- Resolve hosted image pointers through their owning preview origin only on localhost, since local Vite does not serve the hosting asset route; production keeps relative same-project URLs.
+- Keep runtime media and downloads as repository-local files with ordinary Vite imports so production builds work on any static host without Lovable asset routes.
 - Use route-specific head metadata and a public sitemap for the marketing pages; resources remain an editorial shell until real content is supplied.
 - Keep AV Scan product facts centralized and current capabilities separate from roadmap; supplied marks are used until authenticated product media is available.
 - Keep the verified AV Synthesis Lovable workspace link separate from the unverified production destination to avoid implying purchase or public access readiness.

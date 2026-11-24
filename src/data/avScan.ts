@@ -1,14 +1,10 @@
-import mark from "@/assets/av-scan-logo.png.asset.json";
-import handheld1 from "@/assets/av-scan-handheld-unit-1.png.asset.json";
-import handheld2 from "@/assets/av-scan-handheld-unit-2.png.asset.json";
+import mark from "@/assets/av-scan-logo.png";
+import handheld1 from "@/assets/av-scan-handheld-unit-1.png";
+import handheld2 from "@/assets/av-scan-handheld-unit-2.png";
 
-const hosted = (asset: { project_id: string; url: string }) =>
-  import.meta.env.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${asset.project_id}.lovable.app${asset.url}` : asset.url;
-
-export const avScanImage = hosted(mark);
-export const avScanHandheld1 = hosted(handheld1);
-export const avScanHandheld2 = hosted(handheld2);
+export const avScanImage = mark;
+export const avScanHandheld1 = handheld1;
+export const avScanHandheld2 = handheld2;
 export const sensorClasses = [
   { name: "LiDAR", detail: "High-accuracy geometry and mapping.", example: "RoboSense Airy" },
   { name: "RGB-D / Stereo", detail: "Depth, visual geometry and native RGB capture.", example: "Orbbec Gemini 336L" },

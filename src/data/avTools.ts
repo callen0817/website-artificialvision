@@ -1,13 +1,9 @@
-import toolsMark from "../assets/av-tools-logo.png.asset.json";
-import nfXplodeMark from "../assets/av-nf-xplode.png.asset.json";
+import toolsMark from "../assets/av-tools-logo.png";
+import nfXplodeMark from "../assets/av-nf-xplode.png";
 import artwork from "../assets/av-tools-hero.jpg";
-import downloadAsset from "../assets/nf-xplode-download.zip.asset.json";
 import type { SuiteProduct } from "./site";
 
-const assetUrl = (asset: { project_id: string; url: string }) =>
-  import.meta.env?.DEV && typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? `https://id-preview--${asset.project_id}.lovable.app${asset.url}`
-    : asset.url;
+const downloadUrl = new URL("../assets/nf-xplode-download.zip", import.meta.url).href;
 
 export interface RevitPlugin {
   id: string;
@@ -20,9 +16,9 @@ export interface RevitPlugin {
 export const revitPlugins: RevitPlugin[] = [{
   id: "nf-xplode",
   name: "NF Xplode",
-  icon: assetUrl(nfXplodeMark),
+  icon: nfXplodeMark,
   price: 0,
-  downloadUrl: assetUrl(downloadAsset),
+  downloadUrl,
 }];
 
 export const avToolsProduct: SuiteProduct = {
@@ -30,7 +26,7 @@ export const avToolsProduct: SuiteProduct = {
   name: "AV Tools",
   stage: "Tools — Revit plugins",
   tagline: "Free tools for your Revit workflow",
-  logo: assetUrl(toolsMark),
+  logo: toolsMark,
   image: artwork,
   imageCaption: "Modular family workflows · Conceptual illustration",
   status: "Free to download and use",
